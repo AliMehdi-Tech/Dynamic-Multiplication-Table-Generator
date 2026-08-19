@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Multiplication Table Generator</h1>
+            <p>Generate any multiplication table instantly</p>
+        </header>
+
+        <div class="card">
+            <form id="tableForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="number">Table Number</label>
+                        <input type="text" id="number" placeholder="e.g. 7" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="start">Start From</label>
+                        <input type="text" id="start" placeholder="e.g. 1" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="end">End At</label>
+                        <input type="text" id="end" placeholder="e.g. 10" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn-primary">Generate Table</button>
+                    <button type="button" class="btn-secondary" id="clearBtn">Clear</button>
+                </div>
+
+                <div class="error" id="errorMsg"></div>
+            </form>
+        </div>
+
+        <div class="card" id="resultsCard" style="display: none;">
+            <div class="results-header">
+                <h2 id="tableTitle">Multiplication Table</h2>
+                <p id="tableRange"></p>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Multiplier</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card" id="emptyState">
+            <div class="empty-state">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                <p>Enter a number and range above,<br>then click <strong>Generate Table</strong></p>
+            </div>
+        </div>
+
+        <footer>
+            Built with HTML • CSS • JavaScript
+        </footer>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+
+</html>
